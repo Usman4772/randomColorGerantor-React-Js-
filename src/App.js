@@ -29,6 +29,13 @@ setColor(color)
     setColor(`rgb(${r},${g},${b})`)
 
   } 
+    useEffect(()=>{
+    if(type=="hex"){
+      createRandomHexColor()
+    }else {
+      createRandomRbgColor()
+    }
+      },[type])
    return (
   
     <div style={{
